@@ -15,6 +15,8 @@ async function getProgramList() {
     const data = await response.json();
     return data;
 }
+
+
 function generateList(data) {
     console.log(data.body);
     if (!data || !Array.isArray(data.body)) {
