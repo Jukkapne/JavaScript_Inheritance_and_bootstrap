@@ -23,11 +23,10 @@ function generateList(data) {
     }
 
     let listHTML='';
-    for (let item of data.body) {
-        listHTML += '<img src="${item.location}" alt="Loading..." />';
+    
         
         
-    }
+    listHTML += '<h1><a href="index.html">JWST</a></h1>';
     
     console.log("DYNAAMINEN HTML KOODI: "+listHTML);
     return listHTML;
