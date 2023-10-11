@@ -1,16 +1,45 @@
+/* Technical Post Styles */
 #postContainer {
-    background-color: #FFD700; /* Bright yellow color */
+    background-color: #FFD700;
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    font-family: 'Courier New', Courier, monospace; /* Using Courier New font for a different feel */
-    margin-top: 20px; /* Space from the top */
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
 }
 
-#postContainer h2 {
-    font-size: 24px; /* Slightly larger font for the title */
-    margin-bottom: 10px; /* Some spacing between the title and content */
+/* Personal Post Styles */
+#personalContainer {
+    background-color: #ADD8E6; /* Light blue */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Georgia', serif;
+    margin-top: 20px;
 }
 
-#postContainer p, #postContainer pre {
+/* Travel Post Styles */
+#travelContainer {
+    background-color: #98FB98; /* Pale Green */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+}
+
+/* Common styles for titles and content across all post types */
+#postContainer h2, #personalContainer h2, #travelContainer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#postContainer p, #postContainer pre, 
+#personalContainer p, #personalContainer pre, 
+#travelContainer p, #travelContainer pre {
     font-size: 18px;
+}
+#travelContainer button {
+    background: none;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }

@@ -38,8 +38,10 @@ class TravelPost extends Post {
         return `
             <h2>${this.title} (${this.location})</h2>
             <p>${this.content}</p>
+            <button onclick="displayDetailedTravelPost()">See More Details</button>
         `;
     }
+    
 }
 
 // Subclass for Personal Posts
@@ -52,6 +54,27 @@ class PersonalPost extends Post {
     getHtml() {
         return `
             <h2>${this.title} - Feeling: ${this.mood}</h2>
+            <p>${this.content}</p>
+        `;
+    }
+}
+
+
+
+class DetailedTravelPost extends TravelPost {
+    constructor(title, content, location, duration, attractions, anecdote) {
+        super(title, content, location);
+        this.duration = duration;
+        this.attractions = attractions;
+        this.anecdote = anecdote;
+    }
+
+    getHtml() {
+        return `
+            <h2>Detailed Info: ${this.title} (${this.location})</h2>
+            <p><strong>Duration:</strong> ${this.duration}</p>
+            <p><strong>Main Attractions:</strong> ${this.attractions.join(', ')}</p>
+            <p><strong>Anecdote:</strong> ${this.anecdote}</p>
             <p>${this.content}</p>
         `;
     }
