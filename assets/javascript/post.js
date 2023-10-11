@@ -3,11 +3,14 @@ class Post {
     constructor(title, content) {
         this.title = title;
         this.content = content;
+        this.backgroundColor = "white";  // default background color
     }
 
     // Method to display content
     display(html, elementId) {
-        document.getElementById(elementId).innerHTML = html;
+        let container = document.getElementById(elementId);
+        container.innerHTML = html;
+        container.style.backgroundColor = this.backgroundColor;
     }
 }
 
@@ -16,6 +19,8 @@ class TechnicalPost extends Post {
     constructor(title, content, codeSnippet) {
         super(title, content);
         this.codeSnippet = codeSnippet;
+        this.backgroundColor = "#e6f7ff"; // light blue for technical posts
+   
     }
 
     getHtml() {
@@ -32,6 +37,8 @@ class TravelPost extends Post {
     constructor(title, content, location) {
         super(title, content);
         this.location = location;
+        this.backgroundColor = "#e6ffe6"; // light green for travel posts
+
     }
 
     getHtml() {
@@ -49,6 +56,8 @@ class PersonalPost extends Post {
     constructor(title, content, mood) {
         super(title, content);
         this.mood = mood;
+        this.backgroundColor = "#fff0e6"; // light peach for personal posts
+ 
     }
 
     getHtml() {
@@ -67,6 +76,8 @@ class DetailedTravelPost extends TravelPost {
         this.duration = duration;
         this.attractions = attractions;
         this.anecdote = anecdote;
+        this.backgroundColor = "#ccffcc"; // a slightly darker green for detailed travel posts
+  
     }
 
     getHtml() {
