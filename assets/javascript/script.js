@@ -13,6 +13,7 @@ async function getProgramList() {
     }
 
     const data = await response.json();
+    console.log("HALOO ID: "+data.body[0].id);
     return data;
 }
 
@@ -28,7 +29,7 @@ function generateList(data) {
     
         
         
-    listHTML += '<h1><a href="index.html">JWST</a></h1>';
+    listHTML += data.body[0].id;
     
     console.log("DYNAAMINEN HTML KOODI: "+listHTML);
     return listHTML;
