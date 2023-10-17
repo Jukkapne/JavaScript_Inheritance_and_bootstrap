@@ -29,7 +29,8 @@ function generateList(data) {
     
         
         
-    listHTML += data.body[0].id;
+    //listHTML += data.body[0].id;
+    listHTML = "<h1>"+data.body+"</h1>";
     
     console.log("DYNAAMINEN HTML KOODI: "+listHTML);
     return listHTML;
